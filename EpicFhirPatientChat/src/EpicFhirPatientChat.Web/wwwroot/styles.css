@@ -1,0 +1,32 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172033;
+  background: #eef3f8;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.shell { width: min(1100px, 94vw); margin: 32px auto; }
+.hero { padding: 28px; border-radius: 24px; background: linear-gradient(135deg, #ffffff, #dfeafa); box-shadow: 0 18px 40px rgba(31, 55, 91, .12); }
+.eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; color: #526581; font-weight: 700; }
+h1 { margin: 0; font-size: clamp(2rem, 5vw, 4rem); }
+.hero p:last-child { font-size: 1.05rem; color: #4d5b70; }
+.panel { margin-top: 20px; padding: 20px; background: #fff; border-radius: 22px; box-shadow: 0 12px 30px rgba(31, 55, 91, .1); }
+.controls label { display: block; font-weight: 700; margin-bottom: 8px; }
+.row, .chat-form { display: flex; gap: 10px; }
+input { width: 100%; padding: 13px 14px; border: 1px solid #c9d4e3; border-radius: 14px; font-size: 1rem; }
+button { border: 0; border-radius: 14px; padding: 13px 16px; font-weight: 800; cursor: pointer; background: #193d72; color: #fff; white-space: nowrap; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+.summary { white-space: pre-wrap; overflow: auto; max-height: 220px; background: #f7f9fc; padding: 14px; border-radius: 14px; color: #36455b; }
+.chat-panel { min-height: 420px; display: flex; flex-direction: column; }
+.messages { flex: 1; display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.message { max-width: 82%; padding: 13px 15px; border-radius: 18px; line-height: 1.45; white-space: pre-wrap; }
+.message.user { align-self: flex-end; background: #193d72; color: white; border-bottom-right-radius: 6px; }
+.message.assistant { align-self: flex-start; background: #eef3f8; border-bottom-left-radius: 6px; }
+@media (max-width: 720px) {
+  .row, .chat-form { flex-direction: column; }
+  button { width: 100%; }
+  .message { max-width: 100%; }
+}
+.auth-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 18px; }
+.secondary { background: #eef3f8; color: #193d72; }
+#smartStatus { color: #526581; font-weight: 700; }

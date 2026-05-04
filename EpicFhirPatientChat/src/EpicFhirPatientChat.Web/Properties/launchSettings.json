@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "EpicFhirPatientChat.Web": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:57327;http://localhost:57328"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Epic FHIR Patient Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">.NET 8 + Epic FHIR Sandbox + ChatGPT</p>
+        <h1>Patient Visit Chat</h1>
+        <p>Connect with SMART on FHIR OAuth, load scrubbed Epic sandbox FHIR data, then ask chart-style questions in plain English.</p>
+      </div>
+    </section>
+
+    <section class="panel controls">
+      <div class="auth-row">
+        <button id="smartLoginBtn" type="button">Connect to Epic SMART sandbox</button>
+        <button id="smartLogoutBtn" type="button" class="secondary">Logout</button>
+        <span id="smartStatus">Checking SMART status...</span>
+      </div>
+      <label for="patientId">Epic sandbox patient FHIR id</label>
+      <div class="row">
+        <input id="patientId" value="erXuFYUfucBZaryVksYEcMg3" />
+        <button id="loadBtn">Load patient data from Epic sandbox</button>
+      </div>
+      <pre id="summary" class="summary">No patient loaded.</pre>
+    </section>
+
+    <section class="panel chat-panel">
+      <div id="messages" class="messages">
+        <div class="message assistant">Load a patient first, then ask a question such as “Summarize the patient’s recent visits.”</div>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input id="message" autocomplete="off" placeholder="Ask about visits, labs, problems, meds..." />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
